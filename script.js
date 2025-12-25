@@ -73,9 +73,4 @@ function toggleAbout() {
     }
 }
 
-// Parallax effect for header
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const header = document.querySelector('header');
-    header.style.transform = `translateY(${scrolled * 0.3}px)`;
-});
+// Removed parallax effect to keep header fixed
