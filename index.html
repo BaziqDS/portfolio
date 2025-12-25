@@ -3,253 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Baziq Khan - Portfolio</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            min-height: 100vh;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
-        .avatar {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 20px auto;
-            display: block;
-            border: 5px solid #fff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        section {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 30px;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
-        }
-        h1 {
-            margin: 10px 0;
-            font-size: 2.5em;
-        }
-        h2 {
-            color: #333;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .bio {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .skill-section {
-            margin-bottom: 30px;
-        }
-        .project {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-left: 5px solid #667eea;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            transition: transform 0.2s;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .project h3 {
-            margin-top: 0;
-        }
-        .project a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-        .project a:hover {
-            text-decoration: underline;
-        }
-        .stats {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .contact-links a {
-            text-decoration: none;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            backdrop-filter: blur(10px);
-        }
-        @media (max-width: 768px) {
-            section {
-                padding: 20px;
-            }
-            .avatar {
-                width: 150px;
-                height: 150px;
-            }
-            .stats {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <title>Muhammad Baziq Khan — AI & Systems Engineer</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="https://avatars.githubusercontent.com/u/251421376?v=4" alt="Muhammad Baziq Khan Avatar" class="avatar">
-        <h1>Muhammad Baziq Khan</h1>
-        <p class="bio">AI & Data Science • Backend Systems • LLM-Powered Applications</p>
-        <p>📍 From Karachi, Pakistan 🇵🇰 • 🎓 Background in Data Science & AI • 🧠 Strong focus on Machine Learning, LLMs & Intelligent Systems</p>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am an AI and Data Science enthusiast with a passion for building intelligent backend systems and LLM-powered applications. My focus is on end-to-end ML processes—from data to deployment—and I enjoy working on scalable systems and innovative AI solutions.</p>
-        <p>Currently, I'm building AI-powered backend applications and exploring the intersection of machine learning and real-world systems.</p>
-    </section>
+<header class="hero-section">
+    <nav class="navbar">
+        <h1 class="logo">BaziqDS</h1>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button id="theme-toggle">🌓</button></li>
+        </ul>
+    </nav>
 
-    <section id="skills">
-        <h2>Skills & Technologies</h2>
-        <div class="skill-section">
-            <h3>🤖 Artificial Intelligence & Machine Learning</h3>
-            <div class="skills">
-                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-                <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn">
-                <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
-                <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
-                <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle">
-            </div>
-        </div>
-        <div class="skill-section">
-            <h3>🤖 LLMs, Agents & AI Frameworks</h3>
-            <div class="skills">
-                <img src="https://img.shields.io/badge/LangChain-121212?style=for-the-badge" alt="LangChain">
-                <img src="https://img.shields.io/badge/LangGraph-1F2937?style=for-the-badge" alt="LangGraph">
-                <img src="https://img.shields.io/badge/LLM%20Agents-4B5563?style=for-the-badge" alt="LLM Agents">
-            </div>
-        </div>
-        <div class="skill-section">
-            <h3>🧠 MLOps & Experimentation</h3>
-            <div class="skills">
-                <img src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge" alt="MLflow">
-                <img src="https://img.shields.io/badge/DVC-13ADC7?style=for-the-badge" alt="DVC">
-            </div>
-        </div>
-        <div class="skill-section">
-            <h3>🧩 Backend Development</h3>
-            <div class="skills">
-                <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django">
-                <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
-                <img src="https://img.shields.io/badge/REST%20APIs-02569B?style=for-the-badge" alt="REST APIs">
-            </div>
-        </div>
-        <div class="skill-section">
-            <h3>🗄 Databases</h3>
-            <div class="skills">
-                <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-                <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-            </div>
-        </div>
-        <div class="skill-section">
-            <h3>⚙ DevOps, Cloud & Tools</h3>
-            <div class="skills">
-                <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-                <img src="https://img.shields.io/badge/AWS%20Basics-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS">
-                <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-                <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub">
-                <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code">
-            </div>
-        </div>
-    </section>
+    <div class="hero-content">
+        <img src="https://avatars.githubusercontent.com/u/251421376?v=4" alt="Avatar" class="hero-avatar">
+        <h2 class="hero-title">Muhammad Baziq Khan</h2>
+        <p class="hero-sub">AI & Data Science • Backend Systems • LLM-Powered Apps</p>
+        <a href="#projects" class="btn-primary">View Featured Work</a>
+    </div>
+</header>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project">
-            <h3><a href="https://github.com/BaziqDS/Swiggy-Delivery-ML-Model">Swiggy Delivery ML Model</a></h3>
-            <p>A machine learning model to predict food delivery time for Swiggy orders using location, traffic, and delivery metadata. Built with Jupyter Notebook and ML techniques.</p>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/BaziqDS/DL-Rides-Karachi-Demand-Prediction">DL Rides Karachi Demand Prediction</a></h3>
-            <p>Deep learning model for predicting ride demand in Karachi, leveraging time series analysis and neural networks.</p>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/BaziqDS/Ride-Services-Data-Warehouse">Ride Services Data Warehouse</a></h3>
-            <p>Data warehouse for ride services, built with Python for efficient data storage and retrieval.</p>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/BaziqDS/Chess_Game">Chess Game</a></h3>
-            <p>A fully functional chess game implemented in Python, featuring game logic and AI opponent.</p>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/BaziqDS/Inventory_Management_System">Inventory Management System</a></h3>
-            <p>A comprehensive inventory management system written in C, with features for tracking stock and orders.</p>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/BaziqDS/Ludo_Game">Ludo Game</a></h3>
-            <p>A classic Ludo board game developed in C++, supporting multiple players and game state management.</p>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/BaziqDS/Mario_Game">Mario Game</a></h3>
-            <p>A Mario-style platformer game built in C++, featuring levels, enemies, and power-ups.</p>
-        </div>
-        <div class="project">
-            <h3><a href="https://github.com/BaziqDS/SwiftPay">SwiftPay</a></h3>
-            <p>A payment processing system project, exploring secure transaction handling and API integrations.</p>
-        </div>
-    </section>
+<section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>
+        I build **ML & AI-powered backend systems** and bring smart data solutions to life.  
+        My work ranges from full-stack model deployment to scalable system design.
+    </p>
+</section>
 
-    <section id="stats">
-        <h2>GitHub Stats & Achievements</h2>
-        <div class="stats">
-            <img src="https://github-readme-stats.vercel.app/api?username=BaziqDS&show_icons=true&theme=react&border_radius=10" alt="GitHub Stats">
-            <img src="https://github-readme-streak-stats.herokuapp.com/?user=BaziqDS&theme=react&border_radius=10" alt="GitHub Streak">
+<section id="projects" class="projects-section">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+        <!-- Repeatable card -->
+        <div class="project-card">
+            <h3>Swiggy Delivery ML Model</h3>
+            <p>Predict delivery time using location, traffic & order data.</p>
+            <a href="https://github.com/BaziqDS/Swiggy-Delivery-ML-Model" target="_blank">View Repo →</a>
         </div>
-        <div class="stats">
-            <img src="https://leetcard.jacoblin.cool/baziqkhan?theme=radical&font=Ubuntu&ext=activity" alt="LeetCode Stats">
+        <div class="project-card">
+            <h3>DL Rides Karachi Demand Prediction</h3>
+            <p>Time-series model for ride demand in Karachi.</p>
+            <a href="https://github.com/BaziqDS/DL-Rides-Karachi-Demand-Prediction" target="_blank">View Repo →</a>
         </div>
-    </section>
+        <div class="project-card">
+            <h3>Chess Game</h3>
+            <p>Python-based chess with AI opponent.</p>
+            <a href="https://github.com/BaziqDS/Chess_Game" target="_blank">View Repo →</a>
+        </div>
+        <!-- Add more cards similarly -->
+    </div>
+</section>
 
-    <section id="contact">
-        <h2>Let's Connect</h2>
-        <div class="contact-links">
-            <a href="https://www.linkedin.com/in/baziqkhan"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-            <a href="mailto:baziq.ds@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
-            <a href="https://leetcode.com/baziqkhan"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"></a>
-            <a href="https://github.com/BaziqDS"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-        </div>
-        <p>Open to AI research, ML engineering, and impactful real-world systems. Let's build something amazing together!</p>
-    </section>
+<section id="contact" class="contact-section">
+    <h2>Let’s Connect</h2>
+    <div class="contact-links">
+        <a href="https://www.linkedin.com/in/baziqkhan" target="_blank">LinkedIn</a>
+        <a href="mailto:baziq.ds@gmail.com">Email</a>
+        <a href="https://github.com/BaziqDS" target="_blank">GitHub</a>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Muhammad Baziq Khan. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>© 2025 Muhammad Baziq Khan</p>
+</footer>
+
+<script>
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+</script>
+
 </body>
 </html>
