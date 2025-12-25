@@ -23,7 +23,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections
+// Observe all sections (EXCLUDE HEADER)
 document.querySelectorAll('section').forEach(section => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(30px)';
@@ -73,4 +73,5 @@ function toggleAbout() {
     }
 }
 
-// Removed parallax effect to keep header fixed
+// Ensure header scrolls normally (REMOVED any fixed/sticky code)
+// Header is now a normal scrolling element
