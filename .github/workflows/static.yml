@@ -20,6 +20,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -27,19 +28,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload website artifact
+      - name: Upload entire site
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload these files / folders
-          path: |
-            index.html
-            index.css
-            style.css
-            script.js
-            assets/
-            images/
-            icons/
-            favicon.ico
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
