@@ -60,9 +60,22 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
+// Toggle about details
+function toggleAbout() {
+    const details = document.getElementById('about-details');
+    const btn = event.target;
+    if (details.style.display === 'none') {
+        details.style.display = 'block';
+        btn.textContent = 'VIEW LESS';
+    } else {
+        details.style.display = 'none';
+        btn.textContent = 'VIEW MORE';
+    }
+}
+
 // Parallax effect for header
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const header = document.querySelector('header');
-    header.style.transform = `translateY(${scrolled * 0.5}px)`;
+    header.style.transform = `translateY(${scrolled * 0.3}px)`;
 });
