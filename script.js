@@ -2,9 +2,19 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            // Calculate position accounting for fixed header
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const targetPosition = targetElement.offsetTop - headerHeight - 20;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
@@ -73,5 +83,4 @@ function toggleAbout() {
     }
 }
 
-// Ensure header scrolls normally (REMOVED any fixed/sticky code)
-// Header is now a normal scrolling element
+// Header is FIXED - doesn't move when scrolling
